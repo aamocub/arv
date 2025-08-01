@@ -1,0 +1,7 @@
+{
+        "verilog.svFormat.verible.args": "--inplace --indentation_spaces=2 --column_limit=120",
+        "verilog.formatDirs": [
+                "rtl",
+                "bench"
+        ]
+}
