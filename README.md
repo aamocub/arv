@@ -1,3 +1,13 @@
 # (a)lfonso (r)isc-(v) => ¡arv!
 
-Este proyecto no busca ser nada más que un ejercicio personal para aplicar todos los conocimientos obtenidos a lo largo de la carrera en la realización de un procesador RISC-V.
+This project has the goal of being an educational project to help myself learn in much more depth the inner-workings of a modern CPU.
+
+### Features of the ARV CPU
+
+- 32-bit architecture followign the RISC-V ISA.
+- Support for the base ISA.
+- No cache.
+- No branch prediction.
+- 5-stage pipeline (Instruction Fetch, Decode, Execution, Memory access and WriteBack).
+- No superscalar.
+- In-order execution.
