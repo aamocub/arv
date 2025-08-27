@@ -16,8 +16,8 @@ module fifo #(
 );
 
   reg [        WIDTH-1:0] queue_r[DEPTH];
-  reg [$clog2(WIDTH)-1:0] head_r;
-  reg [$clog2(WIDTH)-1:0] tail_r;
+  reg [$clog2(DEPTH)-1:0] head_r;
+  reg [$clog2(DEPTH)-1:0] tail_r;
   reg [        WIDTH-1:0] dout_r;
 
   assign empty_o = tail_r == head_r ? 1'b1 : 1'b0;
