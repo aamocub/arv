@@ -11,6 +11,9 @@
                                 "-Wall",
                                 "-Wno-fatal",
                                 "${relativeFile}",
+                                "${workspaceFolder}/bench/${fileBasenameNoExtension}_tb.sv",
+                                "--top",
+                                "${fileBasenameNoExtension}_tb",
                                 "-I${workspaceFolder}/bench",
                                 "-I${workspaceFolder}/rtl",
                                 "--timing",
@@ -37,6 +40,6 @@
                                 "clear": false
                         },
                         "problemMatcher": []
-                }
+                },
         ]
 }

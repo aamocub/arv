@@ -3,5 +3,6 @@
         "verilog.formatDirs": [
                 "rtl",
                 "bench"
-        ]
+        ],
+        "verilog.linting.verilator.arguments": "--timing --I./rtl --I./bench"
 }
