@@ -9,6 +9,7 @@ module memory_tb ();
   reg                 read_word_en_i;
   reg [$clog2(D)-1:0] read_word_pos_i;
   reg [        W-1:0] read_word_data_o;
+  reg                 read_word_valid_o;
   reg                 write_word_en_i;
   reg [$clog2(D)-1:0] write_word_pos_i;
   reg [        W-1:0] write_word_data_i;
@@ -19,12 +20,13 @@ module memory_tb ();
   ) dut (
       .clk_i(clk_i),
       .rst_ni(rst_ni),
-      .read_word_en_i(read_word_en_i),
-      .read_word_pos_i(read_word_pos_i),
-      .read_word_data_o(read_word_data_o),
-      .write_word_en_i(write_word_en_i),
-      .write_word_pos_i(write_word_pos_i),
-      .write_word_data_i(write_word_data_i)
+      .read_en_i(read_word_en_i),
+      .read_pos_i(read_word_pos_i),
+      .read_data_o(read_word_data_o),
+      .read_valid_o(read_word_valid_o),
+      .write_en_i(write_word_en_i),
+      .write_pos_i(write_word_pos_i),
+      .write_data_i(write_word_data_i)
   );
 
   always #5 clk_i = ~clk_i;
