@@ -14,5 +14,7 @@
                 "./rtl",
                 "./bench"
         ],
-        "verilog.linting.linter": "verilator"
+        "verilog.linting.linter": "verilator",
+        "verilog.ctags.path": "ctags",
+        "ctags-companion.command": "ctags -R --fields=+nKz --langmap=SystemVerilog:+.v -R rtl bench"
 }
