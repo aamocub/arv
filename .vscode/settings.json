@@ -4,5 +4,15 @@
                 "rtl",
                 "bench"
         ],
-        "verilog.linting.verilator.arguments": "--timing --I./rtl --I./bench"
+        "verilog.linting.verilator.arguments": "-Wall --timing",
+        "editor.tabSize": 2,
+        "editor.stickyTabStops": false,
+        "verilog.formatting.verilogFormat.settings": "./.verilog-format.properties",
+        "verilog.formatting.verilogHDL.formatter": "verilog-format",
+        "verilog.formatting.veribleVerilogFormatter.arguments": "--indentation_spaces=2",
+        "verilog.linting.verilator.includePath": [
+                "./rtl",
+                "./bench"
+        ],
+        "verilog.linting.linter": "verilator"
 }

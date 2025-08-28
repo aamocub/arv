@@ -1,0 +1,1 @@
+This text file exists just so git does not remove this folder from the repo. The sim folder is assumed to exist in the scripts necessary to run the simulations and compilation from Verilator.
