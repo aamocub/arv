@@ -1,15 +1,15 @@
 module fifo #(
     parameter integer WIDTH = 32,
-    parameter integer DEPTH = 16   // This parameter must be a power of 2
+    parameter integer DEPTH = 16
 ) (
     input              clk_i,
     input              rstn_i,
-    // write to queue
-    input              push_i,       // set to 1 to indicate push operation
-    input  [WIDTH-1:0] push_data_i,  // data to push into the queue
-    // read from queue
-    input              pop_i,        // set to 1 to indicate pop operation
-    output [WIDTH-1:0] pop_data_o,   // data popped from the queue
+    // --- Write ---
+    input              push_i,
+    input  [WIDTH-1:0] push_data_i,
+    // --- Read ---
+    input              pop_i,
+    output [WIDTH-1:0] pop_data_o,
 
     output full_o,
     output empty_o
