@@ -11,10 +11,10 @@ module fifo_tb ();
 
   fifo #(
       .WIDTH(32),
-      .DEPTH(16)
+      .DEPTH(4)
   ) fifo (
       .clk_i      (clk_i),
-      .rstn_i     (rstn_i),
+      .rst_ni     (rstn_i),
       .push_i     (push_i),
       .push_data_i(push_data_i),
       .pop_i      (pop_i),
