@@ -12,9 +12,9 @@ module fifo_tb ();
   fifo #(
       .WIDTH(32),
       .DEPTH(4)
-  ) fifo (
+  ) u_fifo (
       .clk_i      (clk_i),
-      .rst_ni     (rstn_i),
+      .rst_i      (rstn_i),
       .push_i     (push_i),
       .push_data_i(push_data_i),
       .pop_i      (pop_i),
@@ -22,6 +22,7 @@ module fifo_tb ();
       .full_o     (full_o),
       .empty_o    (empty_o)
   );
+
 
   always #5 clk_i = ~clk_i;
 

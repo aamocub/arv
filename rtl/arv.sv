@@ -1,3 +1,5 @@
+// TODO: Hacer modulo RoundRobin para ordenar los accesos a memoria.
+
 module arv #(
     parameter integer XLEN     = 32,  // Standard data width for RISC-V 32-bit
     parameter integer MEMWIDTH = 32   // Memory Address Length

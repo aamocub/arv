@@ -24,3 +24,4 @@ Rules to remember/follow:
 - Comment the code extensively and reasonably. Don't explain the code, state what is doing in simple terms and why is it doing it.
 - Do NOT leave comments like `// TODO` or `// NOTE`.
 - Wire signals internal to modules should end with a `_w` or `_r` depending on if they are wires or registers, respectively.
+- Unless required, avoid having a wire output that extracts the value from an internal register. Just use a register output.
