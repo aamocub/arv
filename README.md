@@ -22,5 +22,5 @@ Rules to remember/follow:
 - If a signal is active low, then the corresponing port should be `*_ni` or `*_no`.
 - Signals whose purpose is to interconnect modules should have in the name the modules which they are coming from or the modules where they are going to (e.g. `wire push_data_from_fifo`).
 - Comment the code extensively and reasonably. Don't explain the code, state what is doing in simple terms and why is it doing it.
-- Simple comments should start with `//` but documenting-style comments should start with `//!`.
 - Do NOT leave comments like `// TODO` or `// NOTE`.
+- Wire signals internal to modules should end with a `_w` or `_r` depending on if they are wires or registers, respectively.
