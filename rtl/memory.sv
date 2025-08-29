@@ -3,7 +3,7 @@ module memory #(
     parameter integer DEPTH = 1024  //! Determines the NUMBER of WORDS in memory
 ) (
     input                          clk_i,
-    input                          rst_ni,
+    input                          rst_i,
     // --- Read ---
     input                          read_en_i,
     input      [$clog2(DEPTH)-1:0] read_pos_i,
@@ -17,11 +17,12 @@ module memory #(
 
   reg [WIDTH-1:0] mem_r[DEPTH];
 
-  always_ff @(posedge clk_i or negedge rst_ni) begin
-    if (!rst_ni) begin
-      foreach (mem_r[i]) mem_r[i] <= 1;
+  always_ff @(posedge clk_i or posedge rst_i) begin
+    if (rst_i) begin
+      foreach (mem_r[i]) mem_r[i] <= 0;
       read_data_o <= 0;
     end else begin
+      read_valid_o <= 0;
       // Write logic
       if (write_en_i) begin
         mem_r[write_pos_i] <= write_data_i;

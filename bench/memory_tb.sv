@@ -1,7 +1,7 @@
 module memory_tb ();
 
   reg clk_i;
-  reg rst_ni;
+  reg rst_i;
 
   localparam W = 32;
   localparam D = 16;
@@ -19,7 +19,7 @@ module memory_tb ();
       .DEPTH(D)
   ) dut (
       .clk_i(clk_i),
-      .rst_ni(rst_ni),
+      .rst_i(rst_i),
       .read_en_i(read_word_en_i),
       .read_pos_i(read_word_pos_i),
       .read_data_o(read_word_data_o),
@@ -35,7 +35,7 @@ module memory_tb ();
     $dumpfile("memory_tb.vcd");
     $dumpvars(0, memory_tb);
     clk_i = 1;
-    rst_ni = 0;
+    rst_i = 1;
     read_word_en_i = 0;
     read_word_pos_i = 0;
     read_word_data_o = 0;
@@ -43,7 +43,7 @@ module memory_tb ();
     write_word_pos_i = 0;
     write_word_data_i = 0;
 
-    #10 rst_ni = 1;
+    #10 rst_i = 0;
 
     write_word_en_i   = 1;
     write_word_pos_i  = 5;
