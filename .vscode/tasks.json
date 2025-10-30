@@ -28,6 +28,8 @@
                                 "-trace-structs",
                                 "--autoflush",
                                 "--assert",
+                                "-CFLAGS",
+                                "-march=native",
                                 "--Mdir",
                                 "${workspaceFolder}/sim/obj_dir",
                         ],
