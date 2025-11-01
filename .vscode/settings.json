@@ -1,5 +1,5 @@
 {
-        "verilog.svFormat.verible.args": "--inplace --indentation_spaces=2 --column_limit=120",
+        "verilog.svFormat.verible.args": "--inplace --indentation_spaces=4 --column_limit=120",
         "verilog.formatDirs": [
                 "rtl",
                 "bench"
@@ -16,5 +16,17 @@
         ],
         "verilog.linting.linter": "verilator",
         "verilog.ctags.path": "ctags",
-        "ctags-companion.command": "ctags -R --fields=+nKz --langmap=SystemVerilog:+.v -R rtl bench"
+        "ctags-companion.command": "ctags -R --fields=+nKz --langmap=SystemVerilog:+.v -R rtl bench",
+        "verilog.includes": [
+                "rtl",
+                "rtl/include"
+        ],
+        "verilog.index.indexAllIncludes": true,
+        "verilog.inlayHints.ports": "hover",
+        "verilog.svFormat.formatter": "verible-verilog-format",
+        "verilog.svFormat.verible.path": "verible-verilog-format",
+        "verilog.verilogFormat.formatter": "verible-verilog-format",
+        "verilog.verilogFormat.veribleFormatter.args": "--inplace --indentation_spaces=4 --column_limit=120",
+        "verilog.verilogFormat.veribleFormatter.path": "verible-verilog-format",
+        "makefile.configureOnOpen": false
 }
