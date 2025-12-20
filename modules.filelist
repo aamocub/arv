@@ -1,0 +1,8 @@
+./bench/top_tb.sv
+./rtl/core.sv
+./rtl/include/arv_pkg.sv
+./rtl/include/memory_read_if.sv
+./rtl/include/memory_write_if.sv
+./rtl/include/riscv_pkg.sv
+./rtl/memory.sv
+./rtl/register.sv
